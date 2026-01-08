@@ -4,88 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Muhammad Iqbal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: #1f2933;
+            line-height: 1.7;
         }
 
         header {
-            background: #0f172a;
-            color: #fff;
-            padding: 60px 20px;
             text-align: center;
+            padding: 90px 20px;
+            color: #ffffff;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
         header p {
-            margin-top: 10px;
             font-size: 1.1rem;
-            color: #cbd5e1;
+            color: #dbeafe;
         }
 
         section {
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: 0 auto 50px;
             padding: 0 20px;
         }
 
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #0f172a;
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
 
-        .about, .projects {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1e3a8a;
         }
 
         .about p {
-            font-size: 1rem;
+            font-size: 1.05rem;
+            color: #334155;
+        }
+
+        .projects {
+            margin-top: 40px;
         }
 
         .project-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
         .project {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #2563eb;
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 14px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #2563eb;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
         .project h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
             margin-bottom: 10px;
             color: #1e293b;
         }
 
+        .project p {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background: #0f172a;
             color: #cbd5e1;
-            margin-top: 40px;
         }
 
         footer span {
             color: #60a5fa;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .card {
+                padding: 25px;
+            }
         }
     </style>
 </head>
@@ -97,46 +130,46 @@
     </header>
 
     <section>
-        <div class="about">
+        <div class="card about">
             <h2 class="section-title">Tentang Saya</h2>
             <p>
                 Saya adalah siswa jurusan <strong>Teknik Jaringan Komputer dan Telekomunikasi</strong> 
-                dari <strong>SMKS 1 Barunawati</strong>. 
-                Saya memiliki ketertarikan pada bidang jaringan komputer, perangkat keras, 
-                serta pengembangan website sederhana.
+                dari <strong>SMKS 1 Barunawati</strong>. Saya memiliki minat dalam bidang jaringan komputer,
+                perakitan perangkat keras, serta pengembangan website sederhana yang rapi dan responsif.
             </p>
         </div>
     </section>
 
     <section>
-        <div class="projects">
+        <div class="card projects">
             <h2 class="section-title">Projek yang Pernah Dilaksanakan</h2>
+
             <div class="project-list">
                 <div class="project">
                     <h3>Merakit PC</h3>
-                    <p>Merakit komputer dari komponen dasar hingga siap digunakan dan berfungsi dengan baik.</p>
+                    <p>Merakit komputer dari komponen dasar hingga siap digunakan dan berjalan optimal.</p>
                 </div>
 
                 <div class="project">
                     <h3>Instalasi Kabel Jaringan</h3>
-                    <p>Melakukan instalasi kabel jaringan LAN serta pengujian koneksi jaringan.</p>
+                    <p>Instalasi kabel LAN dan pengujian koneksi jaringan dengan hasil stabil.</p>
                 </div>
 
                 <div class="project">
-                    <h3>Memahami Topologi Jaringan</h3>
-                    <p>Mempelajari dan menerapkan berbagai topologi jaringan seperti star, bus, dan ring.</p>
+                    <h3>Topologi Jaringan</h3>
+                    <p>Mempelajari dan menerapkan topologi jaringan seperti star, bus, dan ring.</p>
                 </div>
 
                 <div class="project">
-                    <h3>Membuat Website Sederhana</h3>
-                    <p>Membuat website sederhana menggunakan HTML dan CSS dengan tampilan rapi dan responsif.</p>
+                    <h3>Website Sederhana</h3>
+                    <p>Membuat website sederhana menggunakan HTML dan CSS dengan desain modern.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 <span>Muhammad Iqbal</span>. Portfolio</p>
+        <p>© 2026 <span>Muhammad Iqbal</span> | Portfolio</p>
     </footer>
 
 </body>
